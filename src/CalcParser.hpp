@@ -8,6 +8,9 @@ using namespace std;
 
 typedef struct CalcInstruction_t {
 	// DEFINE YOUR DATA STRUCTURE HERE
+	bool end;
+	int op;
+	int num;
 } CalcInstruction;
 
 /*

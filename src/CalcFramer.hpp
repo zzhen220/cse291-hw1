@@ -2,25 +2,29 @@
 #define CALCFRAMER_HPP
 
 #include <iostream>
+#include <vector>
 
 class CalcFramer {
 public:
+	CalcFramer() {v.clear();}
+
 	void append(std::string chars);
 
 	// Does this buffer contain at least one complete message?
 	bool hasMessage() const;
 
-	// Returns the first instruction
+	// Copy the first instruction in this buffer into the provided class
 	std::string topMessage() const;
 
-	// Removes the first instruction
+	// Pops off the first instruction from the buffer
 	void popMessage();
 
 	// prints the string to an ostream (useful for debugging)
 	void printToStream(std::ostream& stream) const;
 
 protected:
-	// PUT ANY FIELDS YOU NEED HERE
+	std::vector<char> v;
+	// PUT ANY FIELDS/STATE HERE
 };
 
 #endif // CALCFRAMER_HPP
